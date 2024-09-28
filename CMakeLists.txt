@@ -1,12 +1,14 @@
 cmake_minimum_required(VERSION 3.29.5)
 
-# -------------- Project -----------------------------
+# -------------- Project --------------------------------------
 project(JamBox)
 
 
-# ---------- Include FTXUI Library --------------------
+# ------------------- Include Required Libraries ---------------
 
 include(FetchContent)
+
+# ------------------- Include FTXUI Library --------------------
 
 FetchContent_Declare(
   ftxui
@@ -21,30 +23,42 @@ if(NOT ftxui_POPULATED)
 endif()
 
 
-message("Boost is going here...")
-# ------------ Boost Program Options -------------------
+# ---------------------- CLI11 -----------------------------------
+
+
 FetchContent_Declare(
-  Boost
-  GIT_REPOSITORY https://github.com/boostorg/boost.git
-  GIT_TAG boost-1.86.0
-  GIT_PROGRESS ON
+  cli11_proj
+  QUIET
+  GIT_REPOSITORY https://github.com/CLIUtils/CLI11.git
+  GIT_TAG v2.3.2
+)
+
+FetchContent_MakeAvailable(cli11_proj)
+
+
+# ------------------------ SFML -----------------------------------
+
+FetchContent_Declare(
+  SFML
+  GIT_REPOSITORY https://github.com/SFML/SFML.git
+  GIT_TAG 2.6.x
   GIT_SHALLOW ON
-  OVERRIDE_FIND_PACKAGE TRUE # needed to find correct Boost
-  EXCLUDE_FROM_ALL # compile only what you need
+  EXCLUDE_FROM_ALL
+  SYSTEM
 )
+  
+FetchContent_MakeAvailable(SFML)
 
-FetchContent_MakeAvailable(Boost)
+if(WIN32)
+  add_custom_command(
+    TARGET JamBox
+    COMMENT "Copy OpenAL DLL"
+    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${SFML_SOURCE_DIR}/extlibs/bin/$<IF:$<EQUAL:${CMAKE_SIZEOF_VOID_P},8>,x64,x86>/openal32.dll $<TARGET_FILE_DIR:main>
+    VERBATIM
+  )
+endif()
 
-find_package(
-  Boost
-  1.86.0
-  REQUIRED
-  COMPONENTS program_options
-)
-
-# ------------------------------------------------------
-
-message("Done...")
+# ------------------------------------------------------------------
 
 add_executable(${CMAKE_PROJECT_NAME} src/main.cpp)
 
@@ -53,5 +67,6 @@ target_link_libraries(
     PRIVATE ftxui::screen
     PRIVATE ftxui::dom
     PRIVATE ftxui::component
-    PRIVATE Boost::program_options
+    PRIVATE CLI11::CLI11
+    PRIVATE sfml-audio
 )
