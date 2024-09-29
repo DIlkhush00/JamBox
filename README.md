@@ -100,7 +100,7 @@ The JamBox TUI will be divided into four components:
 2.  **Music Names**: Display currently playing song and queue. 
 3. **Keyboard Shortcuts**: Quick glance to common commands.
 	 
-Below is a basic design outline of the terminal interface: ![JamBox Design](./assests/JamBox%20Design.png)
+Below is a basic design outline of the terminal interface: ![JamBox Design](./assets/JamBox%20Design.png)
 
 ## Build and Run
 **Prerequisites**:
