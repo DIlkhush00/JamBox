@@ -102,6 +102,8 @@ The JamBox TUI will be divided into four components:
 	 
 Below is a basic design outline of the terminal interface: ![JamBox Design](./assets/JamBox%20Design.png)
 
+> Design created using [Excalidraw](https://excalidraw.com/).
+
 ## Build and Run
 **Prerequisites**:
 - **CMake** (version 3.1 or higher) 
