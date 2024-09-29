@@ -13,92 +13,102 @@ This proeject uses following required libraries:
 
 ## **Goal Features:**
 
-1.  **Quick Play**  
+1. **Quick Play**  
     Play a single audio file.
-    -   Commands:
-        -   `jambox --play audio.format`
-        -   `jambox -p audio`
+    - Commands:
+    	- `jambox --play audio.format`
+     	- `jambox -p audio`
        
-2.  **Directory Play**  
-    Play all audio files in a directory.
-    -   Commands:
-        -   `jambox --play-dir path_to_directory`
-        -   `jambox -pd path_to_directory`
+2. **Directory Play**  
+   Play all audio files in a directory.
+    - Commands:
+    	- `jambox --play-dir path_to_directory`
+     	- `jambox -pd path_to_directory`
 
-3.  **Play a Playlist**  
-    Play a playlist.
-    -   Commands:
-        -   `jambox --play-playlist playlist_name`
-        -   `jambox -pl playlist_name`
+3. **Play a Playlist**  
+   Play a playlist.
+   
+    - Commands:
+    	- `jambox --play-playlist playlist_name`
+     	- `jambox -pl playlist_name`
     
     
-4.  **Playlist Management**
+5. **Playlist Management**
     
     4a. **Create Playlist**  
-    Create a new playlist.  
-    - Command: 
-	    - `jambox --add-playlist playlist_name`
-	    - `jambox --add-pl playlist_name`
+    Create a new playlist.
+   
+    - Commands:
+    	- `jambox --add-playlist playlist_name`
+     	- `jambox --add-pl playlist_name`
     
     4b. **Add Songs**  
-    Add songs to a playlist.  
+    Add songs to a playlist.
+   
     - Commands:
-	    - `jambox playlist_name --add song1 song2` 
-	    - `jambox playlist_name --add path_to_directory`
+    	- `jambox playlist_name --add song1 song2`
+     	- `jambox playlist_name --add path_to_directory`
     
     4c. **Remove Songs**  
-    Remove songs from a playlist.  
-    - Command: 
-	    - `jambox playlist_name --remove song1 song2`
-	    - `jambox playlist_name -rm song1 song2`
+    Remove songs from a playlist.
+   
+    - Commands:
+    	- `jambox playlist_name --remove song1 song2`
+     	- `jambox playlist_name -rm song1 song2`
     
     4d. **Delete Playlist**  
-    Delete one or more playlists.  
-    - Command:
-	    -  `jambox --delete playlist1 playlist2`
-	    - `jambox -d playlist1 playlist2`
+    Delete one or more playlists.
+   
+    - Commands:
+    	- `jambox --delete playlist1 playlist2`
+     	- `jambox -d playlist1 playlist2`
     
     4e. **Show Playlists**  
-    List available playlists.  
+    List available playlists.
+   
     - Commands:
-	     - `jambox --playlists` 
-		 - `jambox -pl`
+    	- `jambox --playlists`
+     	- `jambox -pl`
     
     4f. **Show Songs in Playlist**  
-    List all songs in a specific playlist.  
-    - Commands: 
-	    - `jambox --list playlist_name` 
-	    - `jambox -l playlist_name`
+    List all songs in a specific playlist.
+   
+    - Commands:
+    	- `jambox --list playlist_name`
+     	- `jambox -l playlist_name`
   
-5.   **Loop and Shuffle**
-	Loop a song or playlist `n` times (default value of `n` is 1). Shuffle over a playlist by adding `-sf` flag.
-		- Commands:
-			- `jambox -p audio -l n` 
-			- `jambox -pl playlist_name -l n`
-			- `jambox -pl playlist_name -sf`
+6. **Loop and Shuffle**
+   Loop a song or playlist `n` times (default value of `n` is 1). Shuffle over a playlist by adding `-sf` flag.
+   
+   - Commands:
+   	- `jambox -p audio -l n`
+   	- `jambox -pl playlist_name -l n`
+   	- `jambox -pl playlist_name -sf`
 		
 
-6.  **Help**  
-    Show all available commands.
+7. **Help**  
+   Show all available commands.
     
-    -   Commands:
-        -   `jambox --help`
-        -   `jambox -h`
+    - Commands:
+    	- `jambox --help`
+     	- `jambox -h`
 
-7.  **TUI support**
-	To play a song or playlist in an interactive terminal user interface, add `-tui` flag.
-	 - Commands:
-		 - `jambox -ui -p audio`
-		 - `jambox -ui -pl playlist_name`
+8. **TUI support**
+   To play a song or playlist in an interactive terminal user interface, add `-tui` flag.
+
+   - Commands:
+   	- `jambox -tui -p audio`
+   	- `jambox -tui -pl playlist_name`
 
 
 
 
 ## Goal Design
 The JamBox TUI will be divided into four components:
-1.  **Playlists**: List of available playlists. 
-2.  **Music Names**: Display currently playing song and queue. 
+1. **Playlists**: List of available playlists. 
+2. **Music Names**: Display currently playing song and queue. 
 3. **Keyboard Shortcuts**: Quick glance to common commands.
+4. **Music Player**: Display status of the current playing music.
 	 
 Below is a basic design outline of the terminal interface: ![JamBox Design](./assets/JamBox%20Design.png)
 
@@ -116,17 +126,17 @@ Below is a basic design outline of the terminal interface: ![JamBox Design](./as
 	cd JamBox
 	```
 2. Create a build directory.
-		`mkdir build && cd build`
+	`mkdir build && cd build`
 		
 3. Build the application.
-		    ```sh
-		    cmake ..
-		    make
+	    ```sh
+	    cmake ..
+	    make
 		```
 		
 4. Run the application.
-		`./jambox [options]`
-		For example: `./jambox --help`
+	`./jambox [options]`
+	For example: `./jambox --help`
 
 
 ## Contributing
