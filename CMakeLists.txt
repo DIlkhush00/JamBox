@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 3.29.5)
+cmake_minimum_required(VERSION 3.1...3.29.5)
 
 # -------------- Project --------------------------------------
-project(JamBox)
+project(JamBox VERSION 1.0.0 LANGUAGES CXX)
 
 
 # ------------------- Include Required Libraries ---------------
