@@ -96,9 +96,9 @@ This proeject uses following required libraries:
 
 ## Goal Design
 The JamBox TUI will be divided into four components:
-		1.  **Playlists**: List of available playlists. 
-		2.  **Music Names**: Display currently playing song and queue. 
-		3. **Keyboard Shortcuts**: Quick glance to common commands
+1.  **Playlists**: List of available playlists. 
+2.  **Music Names**: Display currently playing song and queue. 
+3. **Keyboard Shortcuts**: Quick glance to common commands.
 	 
 Below is a basic design outline of the terminal interface: ![JamBox Design](./assests/JamBox%20Design.png)
 
