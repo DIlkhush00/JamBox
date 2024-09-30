@@ -1,14 +1,21 @@
 cmake_minimum_required(VERSION 3.1...3.29.5)
 
-# -------------- Project --------------------------------------
+#####
+## Project
+#####
 project(JamBox VERSION 1.0.0 LANGUAGES CXX)
 
+# ---------------------------
 
-# ------------------- Include Required Libraries ---------------
+#####
+## Include Required Libraries
+#####
 
 include(FetchContent)
 
-# ------------------- Include FTXUI Library --------------------
+#####
+## Include FTXUI Library
+#####
 
 FetchContent_Declare(
   ftxui
@@ -22,9 +29,9 @@ if(NOT ftxui_POPULATED)
   add_subdirectory(${ftxui_SOURCE_DIR} ${ftxui_BINARY_DIR} EXCLUDE_FROM_ALL)
 endif()
 
-
-# ---------------------- CLI11 -----------------------------------
-
+#####
+## Include CLI11 Library
+#####
 
 FetchContent_Declare(
   cli11_proj
@@ -35,8 +42,9 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(cli11_proj)
 
-
-# ------------------------ SFML -----------------------------------
+#####
+## Include SFML Library
+#####
 
 FetchContent_Declare(
   SFML
@@ -58,9 +66,12 @@ if(WIN32)
   )
 endif()
 
-# ------------------------------------------------------------------
+# --------------------------
 
-add_executable(${CMAKE_PROJECT_NAME} src/main.cpp)
+add_executable(
+  ${CMAKE_PROJECT_NAME} 
+  src/main.cpp
+)
 
 target_link_libraries( 
   ${CMAKE_PROJECT_NAME}
