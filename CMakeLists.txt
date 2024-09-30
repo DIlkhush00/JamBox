@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.1...3.29.5)
 #####
 ## Project
 #####
-project(JamBox VERSION 1.0.0 LANGUAGES CXX)
+project(jambox VERSION 1.0.0 LANGUAGES CXX)
 
 # ---------------------------
 
@@ -76,9 +76,9 @@ add_executable(
 
 target_link_libraries( 
   ${CMAKE_PROJECT_NAME}
-    PRIVATE ftxui::screen
-    PRIVATE ftxui::dom
-    PRIVATE ftxui::component
-    PRIVATE CLI11::CLI11
-    PRIVATE sfml-audio
+  PRIVATE ftxui::screen
+  PRIVATE ftxui::dom
+  PRIVATE ftxui::component
+  PRIVATE CLI11::CLI11
+  PRIVATE sfml-audio
 )
