@@ -71,6 +71,7 @@ endif()
 add_executable(
   ${CMAKE_PROJECT_NAME} 
   src/main.cpp
+  src/CommandHandler.cpp
 )
 
 target_link_libraries( 

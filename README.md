@@ -137,6 +137,7 @@ Below is a basic design outline of the terminal interface: ![JamBox Design](./as
 4. Run the application.
 	`./jambox [options]`
 	For example: `./jambox --help`
+	> You can use sample audio from the [assets](./assets) directory to test the application. Credits for sample audio: [file-examples](https://file-examples.com/)
 
 
 ## Contributing
