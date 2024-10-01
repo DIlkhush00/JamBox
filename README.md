@@ -141,7 +141,7 @@ Below is a basic design outline of the terminal interface: ![JamBox Design](./as
 
 
 ## Contributing
-Feel free to submit issues, feature requests, or contribute by creating a pull request.
+That's great if you want to contribute! Please take a look at this project's (CONTRIBUTING GUIDELINES)[https://github.com/DIlkhush00/JamBox/blob/master/CONTRIBUTING.md] and feel free to raise your PR!
 
 ## License
 
