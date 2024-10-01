@@ -21,7 +21,7 @@ The best way to propose changes is through a pull request. Here's how you can co
 
 ## Report bugs using Github's  [issues](https://github.com/DIlkhush00/JamBox/issues)
 
-We use GitHub issues to track public bugs. Report a bug by  [opening a new issue](https://github.com/DIlkhush00/JamBox/issues/new/choose); it's that easy!
+This project uses GitHub issues to track public bugs. Report a bug by  [opening a new issue](https://github.com/DIlkhush00/JamBox/issues/new/choose); it's that easy!
 
 
 ## License
