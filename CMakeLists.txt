@@ -66,6 +66,13 @@ if(WIN32)
   )
 endif()
 
+#####
+## Include Nlohmann JSON Library
+#####
+
+FetchContent_Declare(json URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz)
+FetchContent_MakeAvailable(json)
+
 # --------------------------
 
 add_executable(
@@ -81,4 +88,5 @@ target_link_libraries(
   PRIVATE ftxui::component
   PRIVATE CLI11::CLI11
   PRIVATE sfml-audio
+  PRIVATE nlohmann_json::nlohmann_json
 )
