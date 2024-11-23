@@ -97,21 +97,21 @@ Below is a basic design outline of the terminal interface: ![JamBox Design](./as
 - **C++ compiler** that supports C++11 or higher (e.g., GCC, Clang)
 
 ### Build Instructions
-1. Clone the repository.
+1. Clone the repository
 	```sh 
 	git clone https://github.com/your-username/JamBox.git
 	cd JamBox
 	```
-2. Create a build directory.
+2. Create a build directory
 	`mkdir build && cd build`
 		
-3. Build the application.
-	    ```sh
-	    cmake ..
-	    make
-		```
+3. Build the application
+   ``` sh
+   cmake ..
+   make
+   ```
 		
-4. Run the application.
+5. Run the application.
 	`./jambox [options]`
 	For example: `./jambox --help`
 	> You can use sample audio from the [assets](./assets) directory to test the application. Credits for sample audio: [file-examples](https://file-examples.com/)
