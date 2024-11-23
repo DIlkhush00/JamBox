@@ -5,6 +5,11 @@ cmake_minimum_required(VERSION 3.1...3.29.5)
 #####
 project(jambox VERSION 1.0.0 LANGUAGES CXX)
 
+# Set C++ standard to C++17
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 # ---------------------------
 
 #####
@@ -79,6 +84,8 @@ add_executable(
   ${CMAKE_PROJECT_NAME} 
   src/main.cpp
   src/CommandHandler.cpp
+  src/Playlist.cpp
+  src/Song.cpp
 )
 
 target_link_libraries( 
