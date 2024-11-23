@@ -1,4 +1,5 @@
 #include "CommandHandler.hpp"
+#include "Playlist.hpp"
 #include <SFML/Audio.hpp>
 #include <algorithm>
 #include <random>
@@ -58,7 +59,7 @@ void CommandHandler::handleAction(Action action)
 
                 if (!music.openFromFile(song))
                 {
-                    std::cout << "Error in playing the audio file: " << song << ". Check the path." << std::endl;
+                    std::cerr << "Error in playing the audio file: " << song << ". Check the path." << std::endl;
                     continue;
                 }
 
